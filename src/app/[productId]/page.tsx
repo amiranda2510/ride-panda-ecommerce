@@ -1,4 +1,4 @@
-import ProductDetail from "../components/product_detail";
+import ProductDetail from "./ProductDetail";
 
 async function getData(id: string) {
   const res = await fetch(`https://fakestoreapi.com/products/${id}`)

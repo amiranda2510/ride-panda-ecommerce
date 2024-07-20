@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image';
 import Link from "next/link";
 import {Button} from "@nextui-org/button";
 
@@ -26,8 +26,8 @@ const Product = (props: IProductProps) => {
           <h3 className="text-lg font-semibold">{props.product.title}</h3>
           <p className="text-muted-foreground text-sm">{props.product.category}</p>
           <div className="flex items-center justify-between mt-4">
-            <span className="font-bold text-lg">${props.product.price.toFixed(2)}</span>
-            <Button size="sm">Add to Cart</Button>
+            <span className="font-bold text-lg text-red-500">${props.product.price.toFixed(2)}</span>
+            <Button size="md" className='border-2 rounded-md font-medium'>Add to Cart</Button>
           </div>
         </div>
         </Link>
