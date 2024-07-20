@@ -1,22 +1,13 @@
 import Image from 'next/image';
 import Link from "next/link";
 import {Button} from "@nextui-org/button";
+import { IProduct } from '@/common/types';
 
-export interface IProduct {
-  id: string
-  name: string
-  price: number
-  rating: number
-  category: string
-  description: string
-  image: string
-}
-
-interface IProductProps {
+type ProductProps = {
   product: IProduct
 }
 
-const Product = (props: IProductProps) => {
+const ProductCard = (props: ProductProps) => {
   return (
     
       <div className="bg-background rounded-lg shadow-md overflow-hidden">
@@ -36,4 +27,4 @@ const Product = (props: IProductProps) => {
   )
 }
 
-export default Product
+export default ProductCard
