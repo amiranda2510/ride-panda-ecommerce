@@ -1,8 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Instructions
 
-First, run the development server:
+run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +16,21 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## About the project
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This is an ecommerce landing page that uses fakestore API. 
 
-## Learn More
+Technologies used:
 
-To learn more about Next.js, take a look at the following resources:
+- NextJS 14
+- Typescript
+- Tailwind CSS
+- NextUI, ShadcnUI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Design structured:
+- This projects use dynamic routes to generate a view for each product consulted.
+- Search bar and pagination are client components, so they respond to user interaction by declaring ‘use client’.
+- The common folder is created to include different files reused trough all the application.
+- Query and Page params are set by the search bar and pagination component accordingly. These components modify the url params in order to filter and render the information required by the user.
+- Pagination was made manually since there was no pagination framework available to use. Here the list of all products was segmented and shown as specified in the code.
+- For image optimization, Nextjs offers the component Image that includes this behavior by deafult, that's why this was the component used for images. 
