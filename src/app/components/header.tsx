@@ -1,7 +1,7 @@
 import Link from "next/link";
-import {Button} from "@nextui-org/button";
+import Search from "./SearchBar"
 
-function MountainIcon(props) {
+function MountainIcon(props: {className: string}) {
   return (
     <svg
       {...props}
@@ -20,7 +20,7 @@ function MountainIcon(props) {
   )
 }
 
-function ShoppingCartIcon(props) {
+function ShoppingCartIcon(props: {className: string}) {
   return (
     <svg
       {...props}
@@ -45,10 +45,11 @@ export default function Header() {
     return (
       <header className="bg-primary text-primary-foreground py-4 shadow">
         <div className="container mx-auto flex items-center justify-between px-4 md:px-6">
-          <Link href="#" className="flex items-center gap-2" prefetch={false}>
+          <Link href="/" className="flex items-center gap-2" prefetch={false}>
             <MountainIcon className="h-6 w-6" />
             <span className="font-bold text-lg">Panda Store</span>
           </Link>
+          <Search />
           <div className="flex items-center gap-4">
             <ShoppingCartIcon className="h-5 w-5" />
         </div>
